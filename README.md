@@ -2,7 +2,7 @@
 
 Social Tracker App is a web-based application that helps you keep track of your social media activity. It allows you to monitor your social media accounts' performance and growth over time, providing you with useful insights that can help you improve your social media strategy.
 
-![image](https://i.imgur.com/nQQbiF4.jpg)
+![image](https://i.imgur.com/4PD7hjD.png)
 
 > With Social Tracker App, you can track your followers, likes, comments, and engagement across multiple social media platforms, including Instagram, Facebook, Twitter, and YouTube. You can also see your top-performing posts, most engaged followers, and other important metrics.
 
