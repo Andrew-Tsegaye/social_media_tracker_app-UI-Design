@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Social Tracker App</title>
+  <link rel="shortcut icon" href="/icon.webp" type="image/x-icon">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="responsive.css">
+
+  <!-- FontAwesome CDN for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Chart.JS CDN for graph -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.8.0/chart.min.js"
+    integrity="sha512-sW/w8s4RWTdFFSduOTGtk4isV1+190E/GghVffMA9XczdJ2MDzSzLEubKAs5h0wzgSJOQTRYyaz73L3d6RtJSg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+
+<body>
+  <div>
+    <nav class="sidebar">
+      <a href="#" class="brand">
+        <h1>SocialTracker</h1>
+      </a>
+      <ul>
+        <li>
+          <a href="#">
+            <i class="fas fa-circle-notch"></i>
+            <span>Overview</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i class="fab fa-instagram"></i>
+            <span>Instagram</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i class="fab fa-facebook"></i>
+            <span>Facebook</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i class="fab fa-twitter"></i>
+            <span>Twitter</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i class="fab fa-linkedin"></i>
+            <span>Linkedin</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i class="fab fa-youtube"></i>
+            <span>YouTube</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i class="fab fa-tiktok"></i>
+            <span>TikTok</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i class="fab fa-twitch"></i>
+            <span>Twitch</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i class="fab fa-dribbble"></i>
+            <span>Dribbble</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i class="fab fa-behance"></i>
+            <span>Behance</span>
+          </a>
+        </li>
+      </ul>
+      <ul class="help">
+        <li>
+          <a href="#">
+            <i class="fas fa-question"></i>
+            <span>Help</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+
+  <main>
+    <nav class="navbar">
+      <div class="input-wrap panel">
+        <i class="fas fa-search"></i>
+        <input type="search" placeholder="Search">
+      </div>
+      <div class="menu">
+        <ul>
+          <li>
+          <li class="fas fa-moon" id="darkToggle"></li>
+          </li>
+          <li>
+          <li class="fas fa-cog"></li>
+          </li>
+          <li>
+          <li class="fas fa-bell"></li>
+          </li>
+        </ul>
+        <div class="profile panel">
+          <div>
+            <img src="./img/profile.jpg" alt="profile-img">
+            <span>Ceptari Tyas</span>
+          </div>
+          <div>
+            <i class="fas fa-angle-down"></i>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <div class="dash">
+      <div class="stats">
+        <h1 class="title">Instagram</h1>
+        <div class="overview">
+          <div class="panel">
+            <div>
+              <div class="icon">
+                <i class="fas fa-user"></i>
+              </div>
+            </div>
+            <div>
+              <h2>2,567</h2>
+              <small>Weekly Followers</small>
+            </div>
+          </div>
+          <div class="panel">
+            <div>
+              <div class="icon">
+                <i class="fas fa-heart"></i>
+              </div>
+            </div>
+            <div>
+              <h2>32,452</h2>
+              <small>Weekly Likes</small>
+            </div>
+          </div>
+          <div class="panel">
+            <div>
+              <div class="icon">
+                <i class="fas fa-comment-dots"></i>
+              </div>
+            </div>
+            <div>
+              <h2>8,542</h2>
+              <small>Weekly Comments</small>
+            </div>
+          </div>
+        </div>
+        <div class="user-info">
+          <div class="profile-card panel">
+            <img src="img/profile.jpg" alt="user">
+            <h3>Ceptari Tyas</h3>
+            <small>Photographer</small>
+            <p>
+              Passionate about capturing all
+              of life's important occasions
+            </p>
+            <a href="#">
+              <b>www.makennakorsgaard.com</b>
+            </a>
+            <p>Austin, TX</p>
+            <div class="profile-stats">
+              <div>
+                <h2>404</h2>
+                <small>Post</small>
+              </div>
+              <div>
+                <h2>13k</h2>
+                <small>Followers</small>
+              </div>
+              <div>
+                <h2>325</h2>
+                <small>Following</small>
+              </div>
+            </div>
+          </div>
+          <div class="panel chart-container">
+            <canvas id="lineChart"></canvas>
+          </div>
+        </div>
+        <div class="gallery">
+          <img src="img/img1.jpg" alt="img">
+          <img src="img/img2.jpg" alt="img">
+          <img src="img/img3.jpg" alt="img">
+          <div class="thumbnails">
+            <img src="img/img4.jpg" alt="img">
+            <img src="img/img5.jpg" alt="img">
+            <img src="img/img6.jpg" alt="img">
+            <img src="img/img7.jpg" alt="img">
+          </div>
+        </div>
+      </div>
+      <div class="activities">
+        <div class="activities-header">
+          <h3>Activities</h3>
+          <a href="#">See all</a>
+        </div>
+        <div class="post panel">
+          <div class="post-header">
+            <img src="img/user1.jpg" alt="user" class="user-image">
+            <div>
+              <h4>Fachry Nurdiansyah</h4>
+              <small>commented on your photo</small>
+            </div>
+          </div>
+          <div class="post-body">
+            <p>
+              "Great work deserves appreciations.
+              This is so amazing"
+            </p>
+            <img src="img/img1.jpg" alt="photo" class="photo">
+          </div>
+          <div>
+            <small>1 h ago</small>
+            <div>
+              <button>
+                <i class="fas fa-heart"></i>
+              </button>
+              <button>
+                <i class="fas fa-share"></i>
+              </button>
+              <button>
+                <i class="fas fa-ellipsis-v"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="post panel">
+          <div class="post-header">
+            <img src="img/user2.jpg" alt="user" class="user-image">
+            <div>
+              <h4>Emmanuel Ikechukwu</h4>
+              <small>commented on your photo</small>
+            </div>
+          </div>
+          <div class="post-body">
+            <p>
+              "I've tried that when I first noticed it,
+              but ill try again. Thank you!"
+            </p>
+            <img src="img/img2.jpg" alt="photo" class="photo">
+          </div>
+          <div>
+            <small>2 h ago</small>
+            <div>
+              <button>
+                <i class="fas fa-heart"></i>
+              </button>
+              <button>
+                <i class="fas fa-share"></i>
+              </button>
+              <button>
+                <i class="fas fa-ellipsis-v"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="post panel">
+          <div class="post-header">
+            <img src="img/user3.jpg" alt="user" class="user-image">
+            <div>
+              <h4>Goutham Tronics</h4>
+              <small>commented on your photo</small>
+            </div>
+          </div>
+          <div class="post-body">
+            <p>
+              "There is something to
+              smash your head over!"
+            </p>
+            <img src="img/img3.jpg" alt="photo" class="photo">
+          </div>
+          <div>
+            <small>3 h ago</small>
+            <div>
+              <button>
+                <i class="fas fa-heart"></i>
+              </button>
+              <button>
+                <i class="fas fa-share"></i>
+              </button>
+              <button>
+                <i class="fas fa-ellipsis-v"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div>
+          <h3>Theme Colors</h3>
+          <ul class="colors">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+
+</html>

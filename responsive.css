@@ -1,0 +1,59 @@
+@media screen and (max-width: 1330px) {
+  .dash {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  body {
+    grid-template-columns: 6em auto;
+  }
+
+  .overview,
+  .user-info,
+  .gallery {
+    grid-template-columns: 1fr;
+  }
+
+  .profile-card,
+  .chart-container {
+    grid-column: 1 / span 1;
+    min-height: 20em;
+  }
+
+  .chart-container #lineChart {
+    width: 100% !important;
+  }
+
+  .sidebar {
+    width: 6em;
+    padding: 1em;
+  }
+
+  .sidebar ul a {
+    justify-content: center;
+  }
+
+  .sidebar ul a i {
+    margin-right: 0;
+  }
+
+  .sidebar ul li span,
+  .brand {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  html {
+    font-size: 14px;
+  }
+
+  .navbar,
+  .navbar .menu {
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 2em;
+  }
+}
